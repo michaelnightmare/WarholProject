@@ -70,9 +70,14 @@
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\Smear\Smear.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\Sobel\PostProcessExample.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\Sprites\SpriteMask\SpriteMaskController.cs" />
+    <Compile Include="Assets\MasterSpriteHandler.cs" />
     <Compile Include="Assets\Project\Scripts\ChangeGridLayout.cs" />
     <Compile Include="Assets\Project\Scripts\ColorScheme.cs" />
     <Compile Include="Assets\Project\Scripts\ColorSetter.cs" />
+    <Compile Include="Assets\Project\Scripts\DestroyTakePhoto.cs" />
+    <Compile Include="Assets\Project\Scripts\LoadScene.cs" />
+    <Compile Include="Assets\Project\Scripts\ScreenShotPreview.cs" />
+    <Compile Include="Assets\Project\Scripts\TakeScreenShot.cs" />
     <Compile Include="Assets\Project\Scripts\WebCam.cs" />
     <Compile Include="Assets\Project\Scripts\WebCamDisplay.cs" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\LowPolyWater\Credits.txt" />
@@ -354,10 +359,10 @@
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_NoiseGeneratorNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DesaturateNode.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Public/Documents/Unity Projects/WarholProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Michael/Documents/GitHub/WarholProject/WarholProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Public/Documents/Unity Projects/WarholProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Michael/Documents/GitHub/WarholProject/WarholProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity2018/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
