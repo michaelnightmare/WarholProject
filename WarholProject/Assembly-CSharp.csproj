@@ -74,8 +74,6 @@
     <Compile Include="Assets\Project\Scripts\ChangeGridLayout.cs" />
     <Compile Include="Assets\Project\Scripts\ColorScheme.cs" />
     <Compile Include="Assets\Project\Scripts\ColorSetter.cs" />
-    <Compile Include="Assets\Project\Scripts\DestroyTakePhoto.cs" />
-    <Compile Include="Assets\Project\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Project\Scripts\ScreenShotPreview.cs" />
     <Compile Include="Assets\Project\Scripts\TakeScreenShot.cs" />
     <Compile Include="Assets\Project\Scripts\WebCam.cs" />
