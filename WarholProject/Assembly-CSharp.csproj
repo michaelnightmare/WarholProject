@@ -70,11 +70,11 @@
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\Smear\Smear.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\Sobel\PostProcessExample.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\Sprites\SpriteMask\SpriteMaskController.cs" />
-    <Compile Include="Assets\MasterSpriteHandler.cs" />
-    <Compile Include="Assets\Project\Scripts\ChangeGridLayout.cs" />
     <Compile Include="Assets\Project\Scripts\ColorScheme.cs" />
     <Compile Include="Assets\Project\Scripts\ColorSetter.cs" />
+    <Compile Include="Assets\Project\Scripts\MasterSpriteHandler.cs" />
     <Compile Include="Assets\Project\Scripts\ScreenShotPreview.cs" />
+    <Compile Include="Assets\Project\Scripts\ShowSharePanel.cs" />
     <Compile Include="Assets\Project\Scripts\TakeScreenShot.cs" />
     <Compile Include="Assets\Project\Scripts\WebCam.cs" />
     <Compile Include="Assets\Project\Scripts\WebCamDisplay.cs" />
