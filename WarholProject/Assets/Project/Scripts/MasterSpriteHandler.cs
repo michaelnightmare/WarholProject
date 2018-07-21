@@ -8,13 +8,15 @@ public class MasterSpriteHandler : MonoBehaviour
     public Sprite screenGrab;
     public GameObject quadView;
     public GameObject previewView;
+    public GameObject shareView;
     public Image previewImage;
 
     public void ToggleToPreview()
     {
         quadView.SetActive(false);
         previewView.SetActive(true);
-        if(screenGrab!=null)
+        shareView.SetActive(false);
+        if (screenGrab!=null)
         {
             previewImage.sprite = screenGrab;
         }
@@ -24,7 +26,16 @@ public class MasterSpriteHandler : MonoBehaviour
     {
         quadView.SetActive(true);
         previewView.SetActive(false);
-      
+        shareView.SetActive(false);
+
+    }
+
+    public void ToggleToShare()
+    {
+        quadView.SetActive(false);
+        previewView.SetActive(true);
+        shareView.SetActive(true);
+
     }
 
 }
