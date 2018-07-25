@@ -12,43 +12,26 @@ public class ScreenShotPreview : MonoBehaviour
     //Sprite defaultImage;
     public string[] files = null;
     int whichScreenShotIsShown = 0;
-    string folderPath = "C:/Users/Michael/Documents/GitHub/WarholProject/WarholProject";
+    string folderPath = "C:/Users/Cameron Horst/Pictures/";
     
   
     void Start()
-    {
-        //canvas.GetComponent<Image>().sprite = defaultImage;
-        files = Directory.GetFiles(folderPath + "/", "*.png");
-     
-        if(files.Length > 0)
-        {
-         
-            GetPictureAndShowIt();
-        }
-        if (files.Length > 1)
-        {
-
-            DeleteImage();
-        }
+    { 
     }
 
 
     public void GetPictureAndShowIt()
     {
-      
-        string pathToFile = files[whichScreenShotIsShown];
-        Texture2D texture = GetScreenshotImage(pathToFile);
+        Image i = GetComponent<Image>();
+
+        Texture2D texture = GetScreenshotImage("C:/Users/Cameron Horst/Pictures/Screenshot.png");
         Sprite sp = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-    
         GetComponent<Image> ().sprite = sp;
-        transform.root.GetComponent<MasterSpriteHandler>().screenGrab = sp;
-
-
     }
 
     Texture2D GetScreenshotImage(string filePath)
     {
-
+        Debug.Log("Trying to load");
         Texture2D texture = null;
         byte[] fileBytes;
         if(File.Exists (filePath))
@@ -57,19 +40,8 @@ public class ScreenShotPreview : MonoBehaviour
             texture = new Texture2D(2, 2, TextureFormat.RGB24, false);
             texture.LoadImage(fileBytes);
         }
+        if (texture != null) Debug.Log("Loaded Texture");
         return texture;
     }
-
-    public void DeleteImage()
-    {
-        if (files.Length > 0)
-        {
-            string pathToFile = files[whichScreenShotIsShown];
-            if (File.Exists(pathToFile))
-                File.Delete(pathToFile);
-            files = Directory.GetFiles(folderPath + "/", "*.png");
-        }
-    }
-
 
 }

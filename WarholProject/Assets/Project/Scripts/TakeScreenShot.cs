@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 
 public class TakeScreenShot : MonoBehaviour
@@ -10,11 +10,10 @@ public class TakeScreenShot : MonoBehaviour
 
     [SerializeField]
 
-    public Text countnum;
+    public TMP_Text countnum;
     public Image flash;
     public float flashA = 1;
-    public Button TakePhotoB;
-    public Image TakePhotoBArt;
+    public GameObject takePhotoButton;
     public ScreenShotPreview previewimage;
 
 
@@ -24,16 +23,14 @@ public class TakeScreenShot : MonoBehaviour
     void Start()
     {
         countnum.gameObject.SetActive(false);
-        TakePhotoB.enabled = true;
-        TakePhotoBArt.enabled = true;
+        takePhotoButton.SetActive(true);
         
     }
 
     public void startCountdown()
     {
         countnum.gameObject.SetActive(true);
-        TakePhotoB.enabled = false;
-        TakePhotoBArt.enabled = false;
+        takePhotoButton.SetActive(false);
      
         StartCoroutine(countingDown());
     }
@@ -58,9 +55,9 @@ public class TakeScreenShot : MonoBehaviour
             flash.color = new Color(1, 1, 1, AlphaC);
             yield return null; 
         }
-      
+
         flash.enabled = false;
-       
+
         yield return null;
         TakePicture();
         yield break;
@@ -97,18 +94,22 @@ public class TakeScreenShot : MonoBehaviour
     {
 
 
-        string timeStamp = System.DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss");
-        string fileName = "Screenshot" + timeStamp + ".png";
-        string pathToSave = fileName;
+        //string timeStamp = System.DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss")
 
-        ScreenCapture.CaptureScreenshot(pathToSave);
+        ScreenCapture.CaptureScreenshot("C:/Users/Cameron Horst/Pictures/Screenshot.png");
 
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(.3f);
+
+        flash.enabled = false;
+
+        Debug.Log("Switching to preview");
+
+        previewimage.GetPictureAndShowIt();
 
         transform.root.GetComponent<MasterSpriteHandler>().ToggleToPreview();
 
-        TakePhotoB.enabled = true;
-        TakePhotoBArt.enabled = true;
+
+        takePhotoButton.SetActive(true);
 
     }
 

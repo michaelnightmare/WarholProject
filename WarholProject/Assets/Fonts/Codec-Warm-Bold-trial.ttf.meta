@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 8f4e8daf4301e3044b0008bf75e906e5
+timeCreated: 1532479716
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Codec Warm Trial
+  fontNames:
+  - Codec Warm Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 214bdd130f4e9944798122bc09bcc535, type: 3}
+  - {fileID: 12800000, guid: 236ad8bbae983a3418e88418bc070cbe, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

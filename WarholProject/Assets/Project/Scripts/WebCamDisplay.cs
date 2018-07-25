@@ -23,9 +23,9 @@ public class WebCamDisplay : MonoBehaviour
         Renderer r = GetComponent<Renderer>();
         mat = r.material;
         mat.SetTexture("_WebcamTexture", WebCam.webcamTexture);
-        mat.SetColor("_Color0", colorScheme.col1);
-        mat.SetColor("_Color1", colorScheme.col2);
-        mat.SetColor("_Color2", colorScheme.col3);
+        mat.SetColor("_Color1", colorScheme.col1);
+        mat.SetColor("_Color2", colorScheme.col2);
+        mat.SetColor("_Color3", colorScheme.col3);
     }
 	
 	// Update is called once per frame
